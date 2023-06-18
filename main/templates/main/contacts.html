@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}
+    Автомастерская Garage
+{% endblock %}
+
+{% block content %}
+        <div class="features">
+            <h1>{{title}}</h1>
+            <p><i class="fa-solid fa-map-location-dot"></i> Наш адрес: Можайское ш., 168, рабочий посёлок Новоивановское</p>
+            <p><i class="fas fa-phone-volume"></i> Телефон: 215-672-234</p>
+            <p><i class="fa-solid fa-envelope"></i> Email: Info@FullGasGarage.com</p>
+            <div class="map" style="width: 90vw; height: 720px; margin-left: 5%; padding-bottom: 50px;">            
+                <script type="text/javascript" charset="utf-8" async 
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2fffb01331a0ddc0fafe75932e46b8923eb9f92d6c1e3ae8beaf6c114906ad48&amp;
+                width=800&amp;
+                height=720&amp;lang=ru_RU&amp;scroll=true">
+            </script></div>
+        </div>
+
+{% endblock %}

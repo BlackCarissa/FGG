@@ -1,0 +1,60 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}
+    Автомастерская Garage
+{% endblock %}
+
+{% block content %}
+        <div class="features">
+            <div class="AboutPage_background"></div>
+            <h1>{{ title }}</h1>
+            <p>Автомастерская FULL GAS GARAGE оказывает услуги в сфере тюнинга и детейлинга начиная с 2012 года. В команду наших мастеров входят профессионалы с опытом более 10-ти лет.
+            Гарантия предоставляется на все наши услуги, так как мы уверны в качестве их выполнения.
+            Наша компания использует только лицензированные продукты наших партнеров:</p>
+            <ul>
+                <li>Кузовные обвесы: Rocket Bunny, Pandem, 6666 Customs, GREDDY, TOP SECRET.</li>
+                <li>Поставка только новых двигателей из Германии и Японии.</li>
+                <li>Оригинальный обвес Rauh-Welt-Begriff.</li>
+                <li>ЭБУ: GREDDY, HKS, HALTECH.</li>
+              </ul>
+            <h1>НАШИ РАБОТЫ</h1>
+        </div>
+        <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{% static 'main/img/gtr.png' %}" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>2017 Nissan GTR R35 Pandem</h5>
+                <p>Наша гордость. Nissan GTR R35 в эксклюзивном обвесе Pandem. Полностью обновлен экстерьер, интерьер, проведена доработка электрики. Интрегрирована система Haltech ELITE 1600</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'main/img/stinger.png' %}" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>2021 Porsche 911 Turbo S Stinger GTR</h5>
+                <p>Мы обожаем марку Porshe и работа над этим экземпляром была для нас честью. Проведен детейлинг и чип-тюнинг.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'main/img/dodge-challenger-srt-hellcat-hre-tuning-dodge.jpg' %}" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5> 2022 dodge challenger srt hellcat</h5>
+                <p>Наша компания работает только над европейскими и японскими авто, но мы не смогли отказаться от работы над этим "зверем". Проведен детейлинг, доработана выхлопная система, поставлен ЭБУ от HKS. Заводской турбонагнетатель усовершенствован. Финальная мощность 983 Л.С </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'main/img/911.png' %}" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5> 1985 Porshe 930 Rauh-Welt-Begriff </h5>
+                <p> Воистину, уникальная работа. Полностью заменен весь экстерьер. Модифицирована выхлопная система. Установлена система Haltech ELITE. Примечательно, что Накай-Сан - создатель RWB - прилетел к нам для оценки этотого проекта. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+{% endblock %}
