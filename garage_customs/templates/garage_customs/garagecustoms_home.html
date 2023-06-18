@@ -1,0 +1,42 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}
+    Garage Customs
+{% endblock %}
+
+{% block content %}
+    <div class="MAGAZINE_logo">GARAGE CUSTOMS</div>
+    <div class="features">
+        <h3>Тюнинг ателье FGG выпускает собственный журнал GARAGE CUSTOMS.</h3>
+        <ul> В нем вы можете почитать:
+            <li>Авторские статьи</li>
+            <li>Обзоры на проекты наших клиентов</li>
+            <li>Мировая автокультура</li>
+            <li>Новости нашего ателье</li>
+          </ul>
+        <h1>Последние статьи:</h1>
+    </div>
+    <div class="row">
+    {% if News %}
+            {% for el in News %}
+                <div class="col-sm-6">
+                    <div class="card" style="float: center;
+                    clear: both;
+                    width: 45vw;
+                    height: auto;
+                    margin: 20px auto;">
+                        <img src="{{ el.image.url }}" class="card-img-top">
+                        <div class="card-body">
+                          <h5 class="card-title" style=" color: black;
+                          font-style: italic; width: auto; text-align: center; margin: 0 auto;" >{{el.title}}</h5>
+                          <p class="card-text" style="color: black;
+                          font-style: italic;
+                          font-size: 20px; text-align: center;">{{el.anons}}</p>
+                          <a href="{% url 'post' el.link %}" class="btn btn-dark" style="margin-left: 40%;">Читать статью</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}
